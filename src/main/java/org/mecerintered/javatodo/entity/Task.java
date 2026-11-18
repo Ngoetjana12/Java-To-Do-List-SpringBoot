@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 
-
 @Entity
 
 @Table(name = "tasks")
@@ -24,7 +23,7 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "task_name", nullable = false)
+    @Column(name = "task_name", nullable = false, unique = true)
     private String taskName;
 
     @Column(name = "created_at")
